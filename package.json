@@ -1,0 +1,11 @@
+{
+  "name": "convex-hull",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BenLirio/convex-hull.git",
+  "author": "Ben Lirio <benjlirio@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/p5": "^1.4.3"
+  }
+}
