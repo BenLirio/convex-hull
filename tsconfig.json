@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "target": "ES2015",
-    "types": ["p5/global"],
-    "noEmit": true
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "lib": ["es5", "es6", "dom"],
+    "rootDir": "src"
   }
 }
