@@ -1,17 +1,15 @@
 import p5 from 'p5'
+import State from './state'
+
+const state = new State()
 
 const s = (p:any) => {
-  let x = 100;
-  let y = 100;
+  p.setup = () => state.setup(p)
+  p.mouseClicked = () => state.mouseClicked(p)
 
-  p.setup = function() {
-    p.createCanvas(700, 410);
-  };
-
-  p.draw = function() {
-    p.background(0);
-    p.fill(255);
-    p.rect(x, y, 50, 50);
+  p.draw = () => {
+    state.update(p)
+    state.draw(p)
   };
 };
 
