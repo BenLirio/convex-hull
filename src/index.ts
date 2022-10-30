@@ -1,16 +1,16 @@
 import p5 from 'p5'
-import State from './state'
+import State from './State'
 
-const state = new State()
 
 const s = (p:any) => {
-  p.setup = () => state.setup(p)
-  p.mouseClicked = () => state.mouseClicked(p)
-
+  const state = new State(p)
+  p.setup = () => state.setup()
+  p.mouseClicked = () => state.mouseClicked()
+  p.windowResized = () => state.resizeCanvas()
   p.draw = () => {
-    state.update(p)
-    state.draw(p)
-  };
-};
+    state.update()
+    state.draw()
+  }
+}
 
 new p5(s)
